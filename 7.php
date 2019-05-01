@@ -33,10 +33,19 @@ $connection = mysqli_connect('localhost', 'root', 'root', 'demo');
 $query = "SELECT * FROM members";
 $result = mysqli_query($connection, $query);
 
+// $row = mysqli_fetch_array($result);
+// echo $row['nickname']."<br>";
+// $row = mysqli_fetch_array($result);
+// echo $row['nickname']."<br>";
+// $row = mysqli_fetch_array($result);
+// echo $row['nickname']."<br>";
+// $row = mysqli_fetch_array($result);
+// echo $row['nickname']."<br>";
+
 while($row = mysqli_fetch_array($result)) {
 	$id = $row['id'];
 	$nickname = $row['nickname'];
-	echo "<h2>$nickname<h2>";
+	echo "<h2>$id. "."$nickname<h2>";
 }
 
 ?>
